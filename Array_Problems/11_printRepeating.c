@@ -8,11 +8,10 @@
 void printRepeating(int A[], int size)
 {
   int *count = (int *)malloc((size - 2)*sizeof(int)); // Creating a Temporary array count to store Index
-  int i;
 
   printf("Repeating elements are ");
   // Traverse the array once.
-  for(i = 0; i < size; i++)
+  for(int i = 0; i < size; i++)
   {
     if(count[A[i]] == 1)           //While traversing, keep track of count of all elements in the array using a temp array count[] of size n
       printf(" %d ", A[i]);
@@ -23,12 +22,12 @@ void printRepeating(int A[], int size)
 
 int main()
 {
-  int i,n;
+  int n;
   printf("Enter the number of Elements to be Entered\n");
   scanf("%d", &n);
   int *A = (int*)malloc(n*sizeof(int));
   printf("Enter the Elements of Array\n");
-  for(i=0;i<n;i++)
+  for(int i=0;i<n;i++)
   {
     scanf("%d", &A[i]);
   }
